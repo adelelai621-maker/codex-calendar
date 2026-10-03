@@ -1,0 +1,157 @@
+name: Update Codex Reset Calendar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-calendar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate calendar
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+          from datetime import datetime, timezone, timedelta
+          from pathlib import Path
+
+          API = "https://didcodexreset.com/openapi/v1/records?kind=reset_scheduled&pageSize=10"
+          items = []
+          page = 1
+          while True:
+              req = urllib.request.Request(
+                  f"{API}&page={page}",
+                  headers={"User-Agent": "codex-reset-calendar/1.0"}
+              )
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  data = json.load(r)
+              if data.get("ok") is not True:
+                  raise RuntimeError("Calendar source returned an unsuccessful response")
+              result = data["data"]
+              items.extend(result["items"])
+              if not result.get("hasNext"):
+                  break
+              page += 1
+
+          def parse_time(s):
+              if not s:
+                  return None
+              return datetime.fromisoformat(s.replace("Z", "+00:00"))
+
+          def ics_time(dt):
+              return dt.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+          def esc(s):
+              return (
+                  str(s or "")
+                  .replace("\\", "\\\\")
+                  .replace("\n", "\\n")
+                  .replace(",", "\\,")
+                  .replace(";", "\\;")
+              )
+
+          now = datetime.now(timezone.utc)
+
+          lines = [
+              "BEGIN:VCALENDAR",
+              "VERSION:2.0",
+              "PRODID:-//Codex Reset Calendar//CN",
+              "CALSCALE:GREGORIAN",
+              "METHOD:PUBLISH",
+              "X-WR-CALNAME:Codex 重置排期",
+              "X-WR-TIMEZONE:Asia/Shanghai",
+              "REFRESH-INTERVAL;VALUE=DURATION:PT1H",
+              "X-PUBLISHED-TTL:PT1H",
+          ]
+
+          for item in items:
+              effective = parse_time(item.get("effectiveAt"))
+              if not effective:
+                  continue
+
+              state = item.get("scheduleState")
+              if state not in ("pending", "elapsed", "fulfilled", None):
+                  continue
+
+              # 保留最近 30 天及未来排期，包括已完成记录
+              if effective < now - timedelta(days=30):
+                  continue
+
+              window = item.get("scheduleWindow") or {}
+              start = parse_time(window.get("startAt")) or effective
+              end = parse_time(window.get("endAt"))
+
+              if not end or end <= start:
+                  end = start + timedelta(hours=1)
+
+              reset_type = item.get("resetType") or "global"
+
+              type_name = {
+                  "global": "全局重置",
+                  "banked": "Banked 重置",
+                  "global_and_banked": "全局 + Banked 重置",
+              }.get(reset_type, "Codex 重置")
+
+              confidence = item.get("confidence")
+              confidence_text = (
+                  f"{round(confidence * 100)}%"
+                  if isinstance(confidence, (int, float))
+                  else "未知"
+              )
+
+              source = item.get("source") or {}
+              source_url = source.get("url") or "https://didcodexreset.com/zh.html"
+
+              state_name = {"pending": "待执行", "elapsed": "已到期", "fulfilled": "已完成"}.get(state, "未知")
+
+              description = (
+                  f"状态：{state_name}\n"
+                  f"置信度：{confidence_text}\n"
+                  f"数据来源：Did Codex Reset / CodexRunway\n"
+                  f"{item.get('text') or ''}"
+              )
+
+              uid = f"codex-reset-{item.get('id')}@calendar"
+
+              lines += [
+                  "BEGIN:VEVENT",
+                  f"UID:{esc(uid)}",
+                  f"DTSTAMP:{ics_time(now)}",
+                  f"DTSTART:{ics_time(start)}",
+                  f"DTEND:{ics_time(end)}",
+                  f"SUMMARY:Codex {esc(type_name)}（{state_name}）",
+                  f"DESCRIPTION:{esc(description)}",
+                  f"URL:{esc(source_url)}",
+                  "STATUS:CONFIRMED",
+                  "END:VEVENT",
+              ]
+
+          lines.append("END:VCALENDAR")
+
+          Path("codex-reset.ics").write_text(
+              "\r\n".join(lines) + "\r\n",
+              encoding="utf-8"
+          )
+          PY
+
+      - name: Commit updated calendar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add codex-reset.ics
+          git diff --cached --quiet && exit 0
+          git commit -m "Update Codex reset calendar"
+          git push
+
