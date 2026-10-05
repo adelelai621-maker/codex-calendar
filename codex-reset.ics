@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
 UID:codex-reset-2105843926221660585@calendar
-DTSTAMP:20261005T022949Z
+DTSTAMP:20261005T033204Z
 DTSTART:20261002T180000Z
 DTEND:20261002T190000Z
 SUMMARY:Codex 全局重置（已完成）
@@ -19,7 +19,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2106233145163141249@calendar
-DTSTAMP:20261005T022949Z
+DTSTAMP:20261005T033204Z
 DTSTART:20261002T070000Z
 DTEND:20261003T070000Z
 SUMMARY:Codex 全局重置（已完成）
@@ -29,7 +29,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2103963215885701493@calendar
-DTSTAMP:20261005T022949Z
+DTSTAMP:20261005T033204Z
 DTSTART:20260928T070000Z
 DTEND:20261005T070000Z
 SUMMARY:Codex 全局重置（已完成）
@@ -39,7 +39,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2103637477760311522@calendar
-DTSTAMP:20261005T022949Z
+DTSTAMP:20261005T033204Z
 DTSTART:20260925T070000Z
 DTEND:20260926T070000Z
 SUMMARY:Codex 全局重置（已完成）
@@ -49,7 +49,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2102463847714247142@calendar
-DTSTAMP:20261005T022949Z
+DTSTAMP:20261005T033204Z
 DTSTART:20260922T070000Z
 DTEND:20260923T070000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -59,7 +59,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2102254445082116335@calendar
-DTSTAMP:20261005T022949Z
+DTSTAMP:20261005T033204Z
 DTSTART:20260922T070000Z
 DTEND:20260923T070000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -69,7 +69,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2101352781219258527@calendar
-DTSTAMP:20261005T022949Z
+DTSTAMP:20261005T033204Z
 DTSTART:20260922T070000Z
 DTEND:20260923T070000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -79,7 +79,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2098612714704891959@calendar
-DTSTAMP:20261005T022949Z
+DTSTAMP:20261005T033204Z
 DTSTART:20260912T070000Z
 DTEND:20260912T080000Z
 SUMMARY:Codex 全局重置（已完成）
@@ -89,32 +89,12 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2097043464538264003@calendar
-DTSTAMP:20261005T022949Z
+DTSTAMP:20261005T033204Z
 DTSTART:20260908T020000Z
 DTEND:20260908T030000Z
 SUMMARY:Codex 全局重置（已完成）
 DESCRIPTION:状态：已完成\n置信度：96%\n数据来源：Did Codex Reset / CodexRunway\nNever gonna give you up\nNever gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry\nNever gonna say goodbye\nNever gonna tell a lie and hurt you\n\nThanks for reading. We will do a global reset of the usage for all paid subscriptions so that you can keep enjoying Astra after burning through all of it doing fun 3D modeling in blender. The work week is about to start.\n\nLands around 6pm PST today.
 URL:https://x.com/thsottiaux/status/2097043464538264003
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:codex-reset-2096035437299237298@calendar
-DTSTAMP:20261005T022949Z
-DTSTART:20260905T030000Z
-DTEND:20260905T040000Z
-SUMMARY:Codex Banked 重置（已完成）
-DESCRIPTION:状态：已完成\n置信度：94%\n数据来源：Did Codex Reset / CodexRunway\nBecause we are beyond happy to have Astra rolled out today ahead of schedule and you have been super patient with us (not really\, but it’s ok!)… we will do the full banked reset today too for all Plus\, Pro and Business users. Lands end of day.\n\nHappy Astra day and enjoy a phenomenal weekend. \n\nPS: If you create the account or upgrade before 8pm PT you will get it too. Still time!
-URL:https://x.com/thsottiaux/status/2096035437299237298
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:codex-reset-2095979536043401428@calendar
-DTSTAMP:20261005T022949Z
-DTSTART:20260905T030000Z
-DTEND:20260905T040000Z
-SUMMARY:Codex Banked 重置（已完成）
-DESCRIPTION:状态：已完成\n置信度：96%\n数据来源：Did Codex Reset / CodexRunway\nSome Plus and Business users won't yet get access to Astra today\, we've got you covered with a banked reset. Lands by end of day and if you create your account by 8pm PT then you'll get it too.
-URL:https://x.com/thsottiaux/status/2095979536043401428
 STATUS:CONFIRMED
 END:VEVENT
 END:VCALENDAR
