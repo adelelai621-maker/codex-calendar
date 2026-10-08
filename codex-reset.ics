@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
 UID:codex-reset-2107913738791596286@calendar
-DTSTAMP:20261008T013039Z
+DTSTAMP:20261008T022829Z
 DTSTART:20261007T070000Z
 DTEND:20261008T070000Z
 SUMMARY:Codex Banked 重置（待执行）
@@ -19,7 +19,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2107913674593644711@calendar
-DTSTAMP:20261008T013039Z
+DTSTAMP:20261008T022829Z
 DTSTART:20261007T070000Z
 DTEND:20261008T070000Z
 SUMMARY:Codex Banked 重置（待执行）
@@ -29,7 +29,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2105843926221660585@calendar
-DTSTAMP:20261008T013039Z
+DTSTAMP:20261008T022829Z
 DTSTART:20261002T180000Z
 DTEND:20261002T190000Z
 SUMMARY:Codex 全局重置（已完成）
@@ -39,7 +39,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2106233145163141249@calendar
-DTSTAMP:20261008T013039Z
+DTSTAMP:20261008T022829Z
 DTSTART:20261002T070000Z
 DTEND:20261003T070000Z
 SUMMARY:Codex 全局重置（已完成）
@@ -49,7 +49,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2103963215885701493@calendar
-DTSTAMP:20261008T013039Z
+DTSTAMP:20261008T022829Z
 DTSTART:20260928T070000Z
 DTEND:20261005T070000Z
 SUMMARY:Codex 全局重置（已完成）
@@ -59,7 +59,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2103637477760311522@calendar
-DTSTAMP:20261008T013039Z
+DTSTAMP:20261008T022829Z
 DTSTART:20260925T070000Z
 DTEND:20260926T070000Z
 SUMMARY:Codex 全局重置（已到期）
@@ -69,7 +69,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2102463847714247142@calendar
-DTSTAMP:20261008T013039Z
+DTSTAMP:20261008T022829Z
 DTSTART:20260922T070000Z
 DTEND:20260923T070000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -79,7 +79,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2102254445082116335@calendar
-DTSTAMP:20261008T013039Z
+DTSTAMP:20261008T022829Z
 DTSTART:20260922T070000Z
 DTEND:20260923T070000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -89,7 +89,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2101352781219258527@calendar
-DTSTAMP:20261008T013039Z
+DTSTAMP:20261008T022829Z
 DTSTART:20260922T070000Z
 DTEND:20260923T070000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -99,22 +99,12 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2098612714704891959@calendar
-DTSTAMP:20261008T013039Z
+DTSTAMP:20261008T022829Z
 DTSTART:20260912T070000Z
 DTEND:20260912T080000Z
 SUMMARY:Codex 全局重置（已完成）
 DESCRIPTION:状态：已完成\n置信度：93%\n数据来源：Did Codex Reset / CodexRunway\nHi Astra users. A reset and a quick update on quality issues that have been posted around.\n\nWorking with some of you\, we have found and fixed the following issues:\n- Some skills written for previous models were triggering too often or preventing the model from checking its work.\n- An opt-in context management experiment that could cause early stops or replies to older messages. We've disabled it. Our rough estimate is that 4-5k users were affected by this experiment.\n- We've also removed some badly configured engines that resulted in a measured quality degradation for a long tail of traffic flowing through them.\n\nWe’ve also made some more minor improvements and things should feel significantly better across the board. More consistent follow-through\, better tracking of your latest message\, and better checks on the work as it’s going through the motions.\n\nThe examples posted and all the users who worked directly with us were incredibly useful in helping fix things quickly. Always grateful for this incredible community.\n\nAnd of course\, a reset is also landing by midnight today.
 URL:https://x.com/thsottiaux/status/2098612714704891959
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:codex-reset-2097043464538264003@calendar
-DTSTAMP:20261008T013039Z
-DTSTART:20260908T020000Z
-DTEND:20260908T030000Z
-SUMMARY:Codex 全局重置（已完成）
-DESCRIPTION:状态：已完成\n置信度：96%\n数据来源：Did Codex Reset / CodexRunway\nNever gonna give you up\nNever gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry\nNever gonna say goodbye\nNever gonna tell a lie and hurt you\n\nThanks for reading. We will do a global reset of the usage for all paid subscriptions so that you can keep enjoying Astra after burning through all of it doing fun 3D modeling in blender. The work week is about to start.\n\nLands around 6pm PST today.
-URL:https://x.com/thsottiaux/status/2097043464538264003
 STATUS:CONFIRMED
 END:VEVENT
 END:VCALENDAR
