@@ -8,8 +8,18 @@ X-WR-TIMEZONE:Asia/Shanghai
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
+UID:codex-reset-2125784147889393806@calendar
+DTSTAMP:20261126T050327Z
+DTSTART:20261125T080000Z
+DTEND:20261126T080000Z
+SUMMARY:Codex Banked 重置（待执行）
+DESCRIPTION:状态：待执行\n置信度：99%\n数据来源：Did Codex Reset / CodexRunway\nWe made a billing mistake at launch of GPT-6.2 that incorrectly discounted GPT-6.2 Astra and Sol usage for most users. \n\nWe’ve fixed this now\, so the same work will use more of your plan’s usage allowance. Comparing to last week\, you will reach your limits 40% faster on GPT-6.2 Astra and 25% faster on Sol. You should still see these go further in usage compared to 6 Astra and 6.1 Sol. Other models weren’t affected\, and we won’t charge you for the difference on past usage.\n\nAs a small token to apologize for the mistake\, we’ll be adding one banked reset for everyone on Go\, Plus\, Pro\, and Business.
+URL:https://x.com/thsottiaux/status/2125784147889393806
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:codex-reset-2125299248782778588@calendar
-DTSTAMP:20261125T223204Z
+DTSTAMP:20261126T050327Z
 DTSTART:20261124T080000Z
 DTEND:20261125T080000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -19,7 +29,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2120999993079451919@calendar
-DTSTAMP:20261125T223204Z
+DTSTAMP:20261126T050327Z
 DTSTART:20261112T080000Z
 DTEND:20261113T080000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -29,7 +39,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2120410480204525936@calendar
-DTSTAMP:20261125T223204Z
+DTSTAMP:20261126T050327Z
 DTSTART:20261112T080000Z
 DTEND:20261113T080000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -39,7 +49,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-op_f6088dc5ed3a9e67f21b489c@calendar
-DTSTAMP:20261125T223204Z
+DTSTAMP:20261126T050327Z
 DTSTART:20261101T070000Z
 DTEND:20261102T080000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -49,7 +59,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2116405414921384099@calendar
-DTSTAMP:20261125T223204Z
+DTSTAMP:20261126T050327Z
 DTSTART:20261031T070000Z
 DTEND:20261102T080000Z
 SUMMARY:Codex Banked 重置（已完成）
@@ -59,7 +69,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:codex-reset-2115273064481218829@calendar
-DTSTAMP:20261125T223204Z
+DTSTAMP:20261126T050327Z
 DTSTART:20261028T080000Z
 DTEND:20261028T090000Z
 SUMMARY:Codex 全局重置（已完成）
